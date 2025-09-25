@@ -1,0 +1,77 @@
+{
+  "invalidSignupData": [
+    {
+      "testCase": "All fields empty",
+      "username": "",
+      "email": "",
+      "password": "",
+      "expectedResult": "validation_error"
+    },
+    {
+      "testCase": "Username empty",
+      "username": "",
+      "email": "abcd@gmail.com",
+      "password": "password123",
+      "expectedResult": "validation_error"
+    },
+    {
+      "testCase": "Email empty",
+      "username": "somu",
+      "email": "",
+      "password": "password123",
+      "expectedResult": "validation_error"
+    },
+    {
+      "testCase": "Password empty",
+      "username": "somu",
+      "email": "abcd@gmail.com",
+      "password": "",
+      "expectedResult": "validation_error"
+    },
+    {
+      "testCase": "Invalid email format",
+      "username": "Somu",
+      "email": "emailemail",
+      "password": "password123",
+      "expectedResult": "validation_error"
+    },
+    {
+      "testCase": "Special characters in username",
+      "username": "%@%&!^@%",
+      "email": "abcd@gmail.com",
+      "password": "password123",
+      "expectedResult": "validation_error"
+    }
+  ], "invalidLoginData": [
+  {
+    "testCase": "inValid emailid",
+    "email": "somu",
+    "password": "pass123",
+    "expectedResult": "login_failure"
+  },
+  {
+    "testCase": "empty email id and password",
+    "email": "",
+    "password": "",
+    "expectedResult": "login_failure"
+  },
+  {
+    "testCase": "Empty emailid",
+    "email": "",
+    "password": "password123",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "Empty email password",
+    "email": "testuser",
+    "password": "",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "Special characters",
+    "email": "@#$%user",
+    "password": "pass@#$%",
+    "expectedResult": "login_failure"
+  }
+]
+}

@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "categoryName": "Fruits & Vegetables",
+      "searchKeyword": "fruits & vegetables"
+    },
+    {
+      "categoryName": "Dairy & Eggs",
+      "searchKeyword": "Dairy & Eggs"
+    },
+    {
+      "categoryName": "Bakery",
+      "searchKeyword": "bakery"
+    }
+  ]
+}
