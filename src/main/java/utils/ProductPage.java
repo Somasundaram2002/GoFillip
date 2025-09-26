@@ -2,6 +2,7 @@ package utils;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class ProductPage {
@@ -32,10 +33,31 @@ public class ProductPage {
     }
 
     public WebElement getSearchBox() {
-        return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Search products...\")"));
+        return driver.findElement(By.className("android.widget.EditText"));
     }
 
     public WebElement getSearchOpenButton() {
         return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"\uF563\")"));
+    }
+
+    public WebElement addtoCart() {
+        return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().description(\"Add to cart\")"));
+    }
+
+
+    public WebElement clearCart() {
+        return driver.findElement(AppiumBy.accessibilityId("Clear cart"));
+    }
+
+    public WebElement setLocation() {
+        return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"\uF3C5\")"));
+    }
+
+    public WebElement useCurrentLocation() {
+        return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Use current location\")"));
+    }
+
+    public WebElement setAddressOk() {
+        return driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Set location\")"));
     }
 }
