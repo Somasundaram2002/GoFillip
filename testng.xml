@@ -1,0 +1,63 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All Test Suite" verbose="2" preserve-order="true" parallel="false">
+    <test name="checkoutNavigation">
+        <classes>
+            <class name="Display.checkoutNavigation">
+                <methods>
+                    <include name="checkoutAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="AddtoCartPrice">
+        <classes>
+            <class name="Display.AddtoCartPrice">
+                <methods>
+                    <include name="AddToCartprice"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="CheckoutProduct">
+        <classes>
+            <class name="Display.CheckoutProduct">
+                <methods>
+                    <include name="CheckOutProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="CartRemoval">
+        <classes>
+            <class name="Display.CartRemoval">
+                <methods>
+                    <include name="cartRemoval"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Product_search">
+        <classes>
+            <class name="Display.Product_search">
+                <methods>
+                    <include name="Prod_search"/>
+                    <include name="AddToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="searchTerm">
+        <classes>
+            <class name="Display.searchTerm">
+                <methods>
+                    <include name="searchTerm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

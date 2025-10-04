@@ -7,6 +7,15 @@ import org.openqa.selenium.By;
 public class Login {
 
     public void createAccount(AndroidDriver driver) {
+
+        try {
+        driver.findElement(By.id("android:id/button1")).click();
+
+        driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click(); }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
         driver.findElement(By.xpath("//android.widget.TextView[@text=\"\uDB82\uDF55\"]")).click();
         driver.findElement(AppiumBy.accessibilityId("Sign up")).click();
 

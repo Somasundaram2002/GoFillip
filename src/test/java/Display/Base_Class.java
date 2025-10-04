@@ -45,11 +45,9 @@ public class Base_Class {
         driver = new AndroidDriver(service.getUrl(), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        driver.findElement(By.id("android:id/button1")).click();
-
-        driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click();
-
     }
+
+
 
     @AfterClass
     public void close() {
