@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'linux' }  // or 'any' if running on the same host
+  agent any // or 'any' if running on the same host
   options { timestamps(); timeout(time: 40, unit: 'MINUTES') }
   environment {
     ANDROID_HOME = "${env.WORKSPACE}/android-sdk"
